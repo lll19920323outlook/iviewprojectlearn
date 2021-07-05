@@ -13,6 +13,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 //引入ivew样式
 import 'iview/dist/styles/iview.css';    // 使用 CSS
 
+
+
+
+import base from './utilities/common'
+
 //使用/注册框架/插件
 Vue.use(iView)
 Vue.config.productionTip = false
@@ -23,3 +28,9 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+// 给Vue扩展 base属性
+Vue.prototype.base = base;
+
+// 添加标签
+Vue.prototype.$tabs = {};
